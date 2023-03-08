@@ -143,8 +143,8 @@ public class Station {
 	        }	
 			System.out.println();
 			
-			Scanner sco = new Scanner(System.in);
-			int option1 = sco.nextInt();
+			Scanner sca = new Scanner(System.in);
+			int option1 = sca.nextInt();
 			
 			if(option1 == 0) {
 				enregistrerStation();
