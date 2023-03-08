@@ -67,7 +67,7 @@ public class Station {
 //	Methode qui cree la liste des 4 stations par defaut
 	public static void defaultStation() {
 		Station tabarre = new Station("Tabarre", 490, 378);
-		Station petionVille = new Station("Pétion Ville", 670, 978);
+		Station petionVille = new Station("Pï¿½tion Ville", 670, 978);
 		Station gressier = new Station("Gressier", 170, 340);
 		Station mirebalais = new Station("Mirebalais", 487, 845);
 		
@@ -95,22 +95,21 @@ public class Station {
 		Scanner sc = new Scanner(System.in);
 		int option = sc.nextInt();
 		
+		if(option == 0) {
+			enregistrerStation();
+		}
 		for(int i = 0; i < listeStation.size(); i++) {
-			if(option == 0) {
-				
-			}else {
 				if(option == i+1) {
 					System.out.println("\t\t\t\t===============================================");
 					System.out.println("\t\t\t\t            "+(i+1)+". Station "+listeStation.get(i)+"            ");
 					System.out.println("\t\t\t\t===============================================");
-					System.out.println("\t\t\t\t   Capacité en Gazoline : "+listeStation.get(i).capaciteGazoline+" Gallon(s)");
-					System.out.println("\t\t\t\t   Capacité en Diesel : "+listeStation.get(i).capaciteDiesel+" Gallon(s)");
+					System.out.println("\t\t\t\t   Capacitï¿½ en Gazoline : "+listeStation.get(i).capaciteGazoline+" Gallon(s)");
+					System.out.println("\t\t\t\t   Capacitï¿½ en Diesel : "+listeStation.get(i).capaciteDiesel+" Gallon(s)");
 					System.out.println("\t\t\t\t   Utilisation Gazoline : "+listeStation.get(i).utilisationGazoline+"%");
 					System.out.println("\t\t\t\t   Utilisation Diesel : "+listeStation.get(i).utilisationDiesel+"%");
-					System.out.println("\t\t\t\t   Quantité Gazoline disponible : "+listeStation.get(i).quantiteGazoline+" Gallon(s)");
-					System.out.println("\t\t\t\t   Quantité Diesel disponible : "+listeStation.get(i).quantiteDiesel+" Gallon(s)");
+					System.out.println("\t\t\t\t   Quantitï¿½ Gazoline disponible : "+listeStation.get(i).quantiteGazoline+" Gallon(s)");
+					System.out.println("\t\t\t\t   Quantitï¿½ Diesel disponible : "+listeStation.get(i).quantiteDiesel+" Gallon(s)");
 				}
-			}
 		}
 	}
 	
