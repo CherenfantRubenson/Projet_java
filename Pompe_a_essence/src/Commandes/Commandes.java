@@ -65,7 +65,7 @@ public class Commandes {
     Scanner myobject = new Scanner(System.in);
     
     // Ajouter les valeurs des attributs à l'ArrayList
-    System.out.println("Entrer l'ID du commande");
+    System.out.println("Entrer l'ID du commandes");
     
      com.setID(myobject.nextInt(ID));
     
