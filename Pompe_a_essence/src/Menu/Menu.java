@@ -14,7 +14,7 @@ public class Menu {
 		System.out.println("\t\t\t\t\t====               Menu              ====");
 		System.out.println("\t\t\t\t\t=========================================");
 		System.out.println();
-		System.out.println("\t\t\t\t\t1. Stations");
+		System.out.println("\t\t\t\t\t1. Stationss");
 		System.out.println("\t\t\t\t\t2. Commandes");
 		System.out.println("\t\t\t\t\t3. Lancer Approvisionnement");
 		System.out.println("\t\t\t\t\t4. Ventes");
