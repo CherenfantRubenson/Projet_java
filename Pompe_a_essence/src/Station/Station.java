@@ -144,14 +144,14 @@ public class Station {
 			System.out.println();
 			
 			Scanner sco = new Scanner(System.in);
-			int option2 = sco.nextInt();
+			int option1 = sco.nextInt();
 			
-			if(option2 == 0) {
+			if(option1 == 0) {
 				enregistrerStation();
 			}
 			
 			for(int i = 0; i < listeStation.size(); i++) {
-				if(option2 == i+1) {
+				if(option1 == i+1) {
 					System.out.println("\t\t\t\t===============================================");
 					System.out.println("\t\t\t\t            "+(i+1)+". Station "+listeStation.get(i)+"            ");
 					System.out.println("\t\t\t\t===============================================");
