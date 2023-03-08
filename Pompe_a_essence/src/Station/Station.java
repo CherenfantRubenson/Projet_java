@@ -67,7 +67,7 @@ public class Station {
 //	Methode qui cree la liste des 4 stations par defaut
 	public static void defaultStation() {
 		Station tabarre = new Station("Tabarre", 490, 378);
-		Station petionVille = new Station("Pétion Ville", 670, 978);
+		Station petionVille = new Station("Pï¿½tion Ville", 670, 978);
 		Station gressier = new Station("Gressier", 170, 340);
 		Station mirebalais = new Station("Mirebalais", 487, 845);
 		
@@ -76,6 +76,7 @@ public class Station {
 		listeStation.add(gressier);
 		listeStation.add(mirebalais);
 	}
+	
 
 //	Methode qui affiche les stations
 	public static void afficherNomsStations() {
@@ -95,27 +96,73 @@ public class Station {
 		Scanner sc = new Scanner(System.in);
 		int option = sc.nextInt();
 		
-		for(int i = 0; i < listeStation.size(); i++) {
-			if(option == 0) {
-				
-			}else {
-				if(option == i+1) {
-					System.out.println("\t\t\t\t===============================================");
-					System.out.println("\t\t\t\t            "+(i+1)+". Station "+listeStation.get(i)+"            ");
-					System.out.println("\t\t\t\t===============================================");
-					System.out.println("\t\t\t\t   Capacité en Gazoline : "+listeStation.get(i).capaciteGazoline+" Gallon(s)");
-					System.out.println("\t\t\t\t   Capacité en Diesel : "+listeStation.get(i).capaciteDiesel+" Gallon(s)");
-					System.out.println("\t\t\t\t   Utilisation Gazoline : "+listeStation.get(i).utilisationGazoline+"%");
-					System.out.println("\t\t\t\t   Utilisation Diesel : "+listeStation.get(i).utilisationDiesel+"%");
-					System.out.println("\t\t\t\t   Quantité Gazoline disponible : "+listeStation.get(i).quantiteGazoline+" Gallon(s)");
-					System.out.println("\t\t\t\t   Quantité Diesel disponible : "+listeStation.get(i).quantiteDiesel+" Gallon(s)");
-				}
-			}
+		if(option == 0) {
+			enregistrerStation();
 		}
+		
+		for(int i = 0; i < listeStation.size(); i++) {
+			if(option == i+1) {
+				System.out.println("\t\t\t\t===============================================");
+				System.out.println("\t\t\t\t            "+(i+1)+". Station "+listeStation.get(i)+"            ");
+				System.out.println("\t\t\t\t===============================================");
+				System.out.println("\t\t\t\t   Capacitï¿½ en Gazoline : "+listeStation.get(i).capaciteGazoline+" Gallon(s)");
+				System.out.println("\t\t\t\t   Capacitï¿½ en Diesel : "+listeStation.get(i).capaciteDiesel+" Gallon(s)");
+				System.out.println("\t\t\t\t   Utilisation Gazoline : "+listeStation.get(i).utilisationGazoline+"%");
+				System.out.println("\t\t\t\t   Utilisation Diesel : "+listeStation.get(i).utilisationDiesel+"%");
+				System.out.println("\t\t\t\t   Quantitï¿½ Gazoline disponible : "+listeStation.get(i).quantiteGazoline+" Gallon(s)");
+				System.out.println("\t\t\t\t   Quantitï¿½ Diesel disponible : "+listeStation.get(i).quantiteDiesel+" Gallon(s)");
+			}
+	}
 	}
 	
 	public static void enregistrerStation() {
+		String nom_new_station;
+		int capacite_gazoline;
+		int capacite_diesel;
+		System.out.println("Entrer le nom de la station");
+		Scanner sc = new Scanner(System.in);
+		nom_new_station = sc.nextLine();
+		System.out.println("Entrer la capacite en gazoline");
+		capacite_gazoline = sc.nextInt();
+		System.out.println("Entrer la capacite en diesel");
+		capacite_diesel = sc.nextInt();
 		
+		Station newStation = new Station(nom_new_station,capacite_gazoline,capacite_diesel);
+		listeStation.add(newStation);
+		 System.out.println("Station enregistree avec succes");
+		 
+		 System.out.println("\t\t\t\t===============================================");
+			System.out.println("\t\t\t\t Tapez 0 pour Enregistrer une nouvelle station");
+			System.out.println("\t\t\t\t===============================================");
+			System.out.println();
+			System.out.println("\t\t\t\t\t======= Liste des stations ======");
+			System.out.println();
+			for (int i = 0; i < listeStation.size(); i++) {
+	            
+	            System.out.println("\t\t\t\t\t\t"+(i+1)+". Station "+listeStation.get(i));
+	        }	
+			System.out.println();
+			
+			Scanner sco = new Scanner(System.in);
+			int option1 = sco.nextInt();
+			
+			if(option1 == 0) {
+				enregistrerStation();
+			}
+			
+			for(int i = 0; i < listeStation.size(); i++) {
+				if(option1 == i+1) {
+					System.out.println("\t\t\t\t===============================================");
+					System.out.println("\t\t\t\t            "+(i+1)+". Station "+listeStation.get(i)+"            ");
+					System.out.println("\t\t\t\t===============================================");
+					System.out.println("\t\t\t\t   Capacitï¿½ en Gazoline : "+listeStation.get(i).capaciteGazoline+" Gallon(s)");
+					System.out.println("\t\t\t\t   Capacitï¿½ en Diesel : "+listeStation.get(i).capaciteDiesel+" Gallon(s)");
+					System.out.println("\t\t\t\t   Utilisation Gazoline : "+listeStation.get(i).utilisationGazoline+"%");
+					System.out.println("\t\t\t\t   Utilisation Diesel : "+listeStation.get(i).utilisationDiesel+"%");
+					System.out.println("\t\t\t\t   Quantitï¿½ Gazoline disponible : "+listeStation.get(i).quantiteGazoline+" Gallon(s)");
+					System.out.println("\t\t\t\t   Quantitï¿½ Diesel disponible : "+listeStation.get(i).quantiteDiesel+" Gallon(s)");
+				}
+		}
 	}
 	
 }
