@@ -28,14 +28,14 @@ public class Menu {
 	        break;
 	    case 2:
 	        Commandes commandes = new Commandes();
-	        commandes.afficherCommandes();
+	        commandes.afficher();
 	        break;
 	    case 3:
 	        Approvisionnements approvisionnements = new Approvisionnements();
 	        approvisionnements.afficherApprovisionnements();
 	        break;
 	    case 4:
-	        Ventes ventes = new Ventes();
+	        Ventes ventes = new Ventes(option, null, option, option, null);
 	        ventes.afficherVentes();
 	        break;
 	    default:

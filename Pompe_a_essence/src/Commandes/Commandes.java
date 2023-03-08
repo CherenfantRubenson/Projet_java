@@ -1,5 +1,8 @@
 package Commandes;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Commandes {
 	 
     private  int ID;
@@ -90,6 +93,9 @@ public class Commandes {
     System.out.println("Quantité de Gallons de Gazoline: " + commandesList.get(2));
     System.out.println("Date de Commande: " + commandesList.get(3));
     System.out.println("Etat: " + commandesList.get(4));
+}
+
+public void afficherCommandes() {
 }
 
 }
